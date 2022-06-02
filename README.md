@@ -14,5 +14,5 @@ nano /root/update-pterodactyl.sh
 If you want the script to automatically run every every hour add the following to `crontab -e` and save the file.
 
 ```sh
-0 * * * * bash /root/update-pterodactyl.sh >> /dev/null 2>&1
+*/5 * * * * bash /root/update-pterodactyl.sh >> /dev/null 2>&1
 ```
