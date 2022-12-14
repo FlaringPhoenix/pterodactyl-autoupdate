@@ -29,7 +29,7 @@ get_current_wings_release() {
 }
 
 get_current_panel_release() {
-  cat "$PTERODACTYL_PATH/config/app.php" | grep -n ^ | grep ^12: | cut -d: -f2 | cut -c18-23 | sed "s/'//g"
+  grep "'version'" "$PTERODACTYL_PATH/config/app.php" | cut -c18-25 | sed "s/[',]//g"
 }
 
 check_root
